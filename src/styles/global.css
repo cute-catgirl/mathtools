@@ -1,0 +1,148 @@
+@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
+
+.light-mode {
+    --ctp-base: var(--ctp-latte-base);
+    --ctp-crust: var(--ctp-latte-crust);
+    --ctp-text: var(--ctp-latte-text);
+    --ctp-overlay0: var(--ctp-latte-overlay0);
+    --ctp-overlay1: var(--ctp-latte-overlay1);
+    --ctp-overlay2: var(--ctp-latte-overlay2);
+    --ctp-surface0: var(--ctp-latte-surface0);
+    --ctp-surface1: var(--ctp-latte-surface1);
+    --ctp-surface2: var(--ctp-latte-surface2);
+    --ctp-blue: var(--ctp-latte-blue);
+    --ctp-red: var(--ctp-latte-red);
+    --shadow: var(--ctp-latte-overlay2);
+    --disabled: var(--ctp-overlay2)
+}
+
+.dark-mode {
+    --ctp-base: var(--ctp-macchiato-base);
+    --ctp-crust: var(--ctp-macchiato-crust);
+    --ctp-text: var(--ctp-macchiato-text);
+    --ctp-overlay0: var(--ctp-macchiato-overlay0);
+    --ctp-overlay1: var(--ctp-macchiato-overlay1);
+    --ctp-overlay2: var(--ctp-macchiato-overlay2);
+    --ctp-surface0: var(--ctp-macchiato-surface0);
+    --ctp-surface1: var(--ctp-macchiato-surface1);
+    --ctp-surface2: var(--ctp-macchiato-surface2);
+    --ctp-blue: var(--ctp-macchiato-blue);
+    --ctp-red: var(--ctp-macchiato-red);
+    --shadow: var(--ctp-macchiato-base);
+    --disabled: var(--ctp-base);
+}
+
+* {
+    font-family: monospace;
+    user-select: none;
+}
+
+.error {
+    color: var(--ctp-red);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    background-color: var(--ctp-base);
+    width: 100vw;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+#card {
+    background-color: var(--ctp-crust);
+    color: var(--ctp-text);
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    max-width: 1200px;
+    min-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 3px 3px 5px 0px var(--ctp-crust);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+#columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#input, #output {
+    width: 50%;
+    text-align: center;
+}
+
+input {
+    font-family: monospace;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: var(--ctp-surface0);
+    color: var(--ctp-text);
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+    /* inner shadow */
+    box-shadow: inset 1px 1px 1px 1px var(--shadow);
+}
+
+input:focus {
+    outline: none;
+    background-color: var(--ctp-surface1);
+}
+
+input:disabled {
+    background-color: var(--disabled);
+}
+
+.caption {
+    font-size: 0.9em;
+    color: var(--ctp-overlay0);
+}
+
+a {
+    color: var(--ctp-blue);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: var(--ctp-text);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: var(--ctp-text);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    color: var(--ctp-blue);
+    transform: translateY(-2px);
+}
+
+#themebutton {
+    font-size: 1.5em;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.collapsed {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.expanded {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease-in-out;
+}
