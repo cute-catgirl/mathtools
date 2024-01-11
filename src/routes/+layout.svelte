@@ -23,7 +23,7 @@
     <div class="card">
         <slot />
         <button on:click={() => darkMode.toggle()} id="themebutton"><Fa icon={faLightbulb} /></button>
-        {#if $page.url.pathname !== "/"}
+        {#if $page.url.pathname !== "{base}/"}
             <a href="{base}/" id="backbutton"><Fa icon={faChevronLeft} /></a>
         {/if}
         <p class="caption"><Fa icon={faHeart} size="s"/> Created by <a href="https://cute-catgirl.github.io">Ben Moon</a><button on:click={() => creditsExpanded = !creditsExpanded} id="expandbutton"><Fa icon={faChevronRight} class={creditsExpanded ? "expanded" : "collapsed"} size="xs"/></button></p>
