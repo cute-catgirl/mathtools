@@ -21,10 +21,6 @@
 
 <div class:dark-mode={$darkMode} class:light-mode={!$darkMode} id="main">
     <div class="card">
-        <h1>{$page.url.pathname}</h1>
-        <h2>{base}</h2>
-        <h3>{$page.url.pathname == base}</h3>
-        <h3>{$page.url.pathname === base}</h3>
         <slot />
         <button on:click={() => darkMode.toggle()} id="themebutton"><Fa icon={faLightbulb} /></button>
         {#if $page.url.pathname !== base}
