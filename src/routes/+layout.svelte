@@ -4,7 +4,7 @@
     import Fa from "svelte-fa/src/fa.svelte";
     import { slide } from 'svelte/transition';
     import { page } from '$app/stores';
-    import {base} from "$app/paths";
+    import { base } from "$app/paths";
 
     import {
         faChevronLeft,

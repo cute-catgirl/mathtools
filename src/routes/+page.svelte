@@ -1,8 +1,12 @@
+<script>
+    import { base } from "$app/paths";
+</script>
+
 <svelte:head>
     <title>Math Tools</title>
 </svelte:head>
 
 <main>
     <h1>Math Tools</h1>
-    <a href="trianglesolver">Right Triangle Solver</a>
+    <a href="{base}/trianglesolver">Right Triangle Solver</a>
 </main>
