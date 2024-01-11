@@ -4,6 +4,7 @@
     import Fa from "svelte-fa/src/fa.svelte";
     import { slide } from 'svelte/transition';
     import { page } from '$app/stores';
+    import {base} from "$app/paths";
 
     import {
         faChevronLeft,
@@ -23,7 +24,7 @@
         <slot />
         <button on:click={() => darkMode.toggle()} id="themebutton"><Fa icon={faLightbulb} /></button>
         {#if $page.url.pathname !== "/"}
-            <a href="/" id="backbutton"><Fa icon={faChevronLeft} /></a>
+            <a href="{base}/" id="backbutton"><Fa icon={faChevronLeft} /></a>
         {/if}
         <p class="caption"><Fa icon={faHeart} size="s"/> Created by <a href="https://cute-catgirl.github.io">Ben Moon</a><button on:click={() => creditsExpanded = !creditsExpanded} id="expandbutton"><Fa icon={faChevronRight} class={creditsExpanded ? "expanded" : "collapsed"} size="xs"/></button></p>
         {#if creditsExpanded}
