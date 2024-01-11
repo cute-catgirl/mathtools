@@ -21,7 +21,7 @@
 </script>
 
 <div>
-    <label>{label}</label>
+    <label for="input">{label}</label>
     <input class:error={error} type="text" bind:value={inputValue} disabled={disabled} />
 </div>
 

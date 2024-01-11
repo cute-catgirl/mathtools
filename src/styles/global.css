@@ -53,7 +53,7 @@ body {
     transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
-#card {
+.card {
     background-color: var(--ctp-crust);
     color: var(--ctp-text);
     border-radius: 10px;
@@ -67,7 +67,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 3px 3px 5px 0px var(--ctp-crust);
+    box-shadow: 3px 3px 5px 0 var(--ctp-crust);
     transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -135,6 +135,19 @@ button:hover {
     position: absolute;
     top: 20px;
     right: 20px;
+}
+
+#backbutton {
+    color: var(--ctp-text);
+    font-size: 1.5em;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#backbutton:hover {
+    color: var(--ctp-blue);
+    transform: translateY(-2px);
 }
 
 .collapsed {
