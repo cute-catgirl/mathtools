@@ -95,7 +95,7 @@
         <div id="input">
             <h2>Input</h2>
             {#each fields as field}
-                <NumberInput bind:value={triangleData.inputs[field.name]} label={field.label} error={invalidInputs.includes(field.name)} disabled={triangleData.inputs[field.name] === null && triangleData.outputs[field.name] !== null} />
+                <NumberInput bind:value={triangleData.inputs[field.name]} label={field.label} vertical={false} error={invalidInputs.includes(field.name)} defaultValue={null} disabled={triangleData.inputs[field.name] === null && triangleData.outputs[field.name] !== null} />
             {/each}
         </div>
         <div id="output">

@@ -157,3 +157,13 @@ button:hover {
     transform: rotate(90deg);
     transition: transform 0.3s ease-in-out;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding-bottom: 1rem;
+}

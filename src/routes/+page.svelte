@@ -8,5 +8,8 @@
 
 <main>
     <h1>Math Tools</h1>
-    <a href="{base}/trianglesolver">Right Triangle Solver</a>
+    <ul>
+        <li><a href="{base}/trianglesolver">Right Triangle Solver</a></li>
+        <li><a href="{base}/physics">Displacement Calculator</a></li>
+    </ul>
 </main>

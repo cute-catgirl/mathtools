@@ -5,8 +5,16 @@
     const maxLength = 10; // Set a maximum length for the input
     let inputValue = ''; // Internal string representation
     let lastValidValue = ''; // Keep track of the last valid input
+    export let defaultValue;
     export let value = 0; // Exported numeric value
     export let disabled = false;
+    export let vertical = false;
+
+    $: {
+        if (defaultValue != null) {
+            inputValue = defaultValue;
+        }
+    }
 
     $: {
         if (inputValue.length > maxLength || !/^\d*\.?\d*$/.test(inputValue)) {
@@ -20,16 +28,23 @@
     }
 </script>
 
-<div>
+<div class:vertical={vertical}>
     <label for="input">{label}</label>
-    <input class:error={error} type="text" bind:value={inputValue} disabled={disabled} />
+    <input class:error={error} type="text" bind:value={inputValue} disabled={disabled}/>
 </div>
 
 
 <style>
     div {
-        display: flex;
         margin-bottom: 10px;
+        display: flex;
         justify-content: space-between;
+        width: auto;
+    }
+    .vertical {
+        flex-direction: column;
+    }
+    input {
+        width: 100%;
     }
 </style>
