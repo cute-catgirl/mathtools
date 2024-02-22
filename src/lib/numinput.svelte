@@ -45,6 +45,6 @@
         flex-direction: column;
     }
     input {
-        width: 100%;
+        width: auto;
     }
 </style>
