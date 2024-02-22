@@ -86,8 +86,10 @@
                             <NumberInput bind:value={step.time} label="Time (s)" vertical={true} defaultValue={0}></NumberInput>
                         {/if}
                         <NumberInput bind:value={step.direction} label="Direction (°)" vertical={true} defaultValue={0}></NumberInput>
-                        <button on:click={() => changeStepMode(step.id)}><Fa icon={faRightLeft}></Fa></button>
-                        <button on:click={() => removeStep(step.id)}><Fa icon={faXmark}></Fa></button>
+                        <div class="controls">
+                            <button on:click={() => changeStepMode(step.id)}><Fa icon={faRightLeft} size="s"></Fa></button>
+                            <button on:click={() => removeStep(step.id)}><Fa icon={faXmark} size="s"></Fa></button>
+                        </div>
                     </div>
                 {/each}
             {:else}
@@ -126,5 +128,9 @@
         justify-content: space-between;
         align-items: center;
         gap: 1rem;
+    }
+    
+    .controls {
+        display: flex;
     }
 </style>
