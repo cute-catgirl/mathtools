@@ -26,7 +26,7 @@
         {#if $page.url.pathname !== base}
             <a href="{base}/" id="backbutton"><Fa icon={faChevronLeft} /></a>
         {/if}
-        <p class="caption"><Fa icon={faHeart} size="s"/> Created by <a href="https://cute-catgirl.github.io">Ben Moon</a><button on:click={() => creditsExpanded = !creditsExpanded} id="expandbutton"><Fa icon={faChevronRight} class={creditsExpanded ? "expanded" : "collapsed"} size="xs"/></button></p>
+        <p class="caption"><Fa icon={faHeart} size="s"/> Created by <a href="https://maemoon.me">Mae Moon</a><button on:click={() => creditsExpanded = !creditsExpanded} id="expandbutton"><Fa icon={faChevronRight} class={creditsExpanded ? "expanded" : "collapsed"} size="xs"/></button></p>
         {#if creditsExpanded}
             <div id="expandedcredits">
                 <p class="caption" transition:slide><Fa icon={faGears} size="s"/> Made with <a href="https://svelte.dev">Svelte</a> and <a href="https://kit.svelte.dev">SvelteKit</a></p>
